@@ -49,6 +49,7 @@ function send_sms_code(sendBtn,tipsId){
         $inpRegCaptcha = $('#mobile-register-captcha_1'),
         verify = verifyDialogSubmit(
             [
+
                 {id: '#jsRegMobile', tips: Dml.Msg.epPhone, errorTips: Dml.Msg.erPhone, regName: 'phone', require: true},
                 {id: '#mobile-register-captcha_1', tips: Dml.Msg.epVerifyCode, errorTips: Dml.Msg.erVerifyCode, regName: 'verifyCode', require: true}
             ]

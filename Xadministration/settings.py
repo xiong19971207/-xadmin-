@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'xadmin.apps.XAdminConfig',
 
+    # 验证码
     'captcha'
 
 ]

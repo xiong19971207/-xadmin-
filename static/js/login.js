@@ -99,6 +99,7 @@ $(function() {
     $('#jsSendCode').on('click',function(){
         send_sms_code(this,$('#jsMobileTips'));
     });
+
     //发送手机验证码
     function send_sms_code(sendBtn,tipsId){
         var $sendBtn = $(sendBtn),
@@ -107,7 +108,9 @@ $(function() {
             $inpRegCaptcha = $('#id_captcha_1'),
             verify = verifyDialogSubmit(
                 [
-                    {id: '#jsRegMobile', tips: Dml.Msg.epPhone, errorTips: Dml.Msg.erPhone, regName: 'phone', require: true},
+
+                    // 检查是否是正确的email
+                    {id: '#jsRegMobile', tips: Dml.Msg.epMail, errorTips: Dml.Msg.erMail, regName: 'email', require: true},
                     {id: '#id_captcha_1', tips: Dml.Msg.epVerifyCode, errorTips: Dml.Msg.erVerifyCode, regName: 'verifyCode', require: true}
                 ]
             );

@@ -19,7 +19,7 @@ from django.urls import path, include
 
 # 导入视图
 from django.views.generic import TemplateView
-from apps.users.views import LoginView, LogoutView
+from apps.users.views import LoginView, LogoutView, RegisterView
 
 from apps.users import views as user_views
 
@@ -34,6 +34,7 @@ urlpatterns = [
     # 利用CBV编程：class base view
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
+    path('register/', RegisterView.as_view(), name='register'),
 
     # 加入图形验证码
     url(r'^captcha/', include('captcha.urls')),

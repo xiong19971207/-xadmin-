@@ -16,3 +16,8 @@ class DynamicLoginForm(forms.Form):
     动态验证码验证类
     """
     captcha = CaptchaField()
+
+
+class DynamicRegisterForms(forms.Form):
+
+    captcha = CaptchaField()
