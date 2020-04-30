@@ -56,9 +56,9 @@
         <div class="wp header-box">
             <p class="fl hd-tips">多米乐，您身边的装修平台！</p>
             <ul class="fr hd-bar">
-                <li>服务电话：<span>4001008031</span></li>
-                <li><a href="/login/">[登录]</a></li>
-                <li class="active"><a href="/register/">[注册]</a></li>
+                <li>服务电话：<span>17855370672@163.com</span></li>
+                <li><a href="{% url 'login' %}">[登录]</a></li>
+                <li class="active"><a href="{% url 'register' %}">[注册]</a></li>
             </ul>
         </div>
     </div>
@@ -85,23 +85,33 @@
                     <h2 class="active">手机注册</h2>
                 </div>
                 <div class="tab-form">
-                    <form id="mobile_register_form" method="post" action="/register/" autocomplete="off">
+
+                    <form id="mobile_register_form" method="post" action="{% url 'register' %}" autocomplete="off">
+                        {% csrf_token %}
 
                         <div class="form-group marb20 ">
-                            <input id="jsRegMobile" name="mobile" type="text" placeholder="请输入您的邮箱">
+                            <input id="jsRegEmail" name="email" type="text" placeholder="请输入您的邮箱">
                         </div>
+
                         <div class="form-group marb20 blur" id="jsRefreshCode">
-                            {{ d_login_form.captcha }}
+                            {{ check_forms.captcha }}
                         </div>
+
                         <div class="clearfix">
                             <div class="form-group marb8 verify-code ">
                                 <input id="jsPhoneRegCaptcha" name="code" type="text" placeholder="输入手机验证码">
                             </div>
-                            <input class="verify-code-btn sendcode" id="jsSendCode" value="发送验证码">
+
+                            <div id="xiong">
+                            <input class="verify-code-btn sendcode" id="jsSendCode123" name="jsSendCode1234" value="发送邮件" >
+                            </div>
+
                         </div>
+
                         <div class="form-group marb8 ">
                             <input id="jsPhoneRegPwd" name="password" type="password" placeholder="请输入6-20位非中文字符密码">
                         </div>
+
                         <div class="error btns" id="jsMobileTips" ></div>
                         <div class="auto-box marb8">
 
@@ -109,6 +119,7 @@
                         <input class="btn btn-green" id="jsMobileRegBtn" type="button" value="注册并登录">
                     <input type="hidden" name="csrfmiddlewaretoken" value="r20XuUA2E7Aw0becQXwBbl57JQLgmKXrBBLY1FlPzoKyjZxXrwHVn9cvfwDxXFco">
                     </form>
+
                 </div>
                 <p class="form-p">已有账号？<a href="{% url 'login' %}">[立即登录]</a></p>
             </div>

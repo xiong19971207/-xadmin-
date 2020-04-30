@@ -78,6 +78,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -139,3 +140,13 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR, os.path.join('static')]
+
+# MEDIA的配置,配置之后文件自动存到media下
+MEDIA_URL = "/media/"
+# 不能写成MEDIA_ROOT = [BASE_DIR, os.path.join('media')]会报错
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# 网易邮箱设置
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_HOST_USER = '17855370672@163.com'
+EMAIL_HOST_PASSWORD = 'sx123456'

@@ -1,6 +1,6 @@
 from django.db import models
 
-from apps.organizations.models import Teacher
+from apps.organizations.models import Teacher, CourseOrg
 from apps.users.models import BaseModel
 
 
@@ -11,6 +11,7 @@ class Course(BaseModel):
     """
 
     teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, verbose_name='老师')
+    course_org = models.ForeignKey(CourseOrg, null=True, blank=True, on_delete=models.CASCADE, verbose_name='授课机构')
 
     name = models.CharField(max_length=50, verbose_name='课程名')
     desc = models.CharField(max_length=300, verbose_name='课程描述')
