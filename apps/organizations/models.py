@@ -47,7 +47,7 @@ class CourseOrg(BaseModel):
         利用Django外键的显性方法
         :return: courses
         """
-        courses = self.course_set.all()
+        courses = self.course_set.filter(is_classics=True)
         return courses
 
     class Meta:

@@ -28,6 +28,8 @@ class Course(BaseModel):
     detail = models.TextField(verbose_name='课程详情')
     image = models.ImageField(upload_to="courses/%Y/%m", verbose_name="封面图", max_length=100)
 
+    is_classics = models.BooleanField(default=False,verbose_name='是否是经典')
+
     class Meta:
         verbose_name = "课程信息"
         verbose_name_plural = verbose_name
