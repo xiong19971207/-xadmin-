@@ -50,8 +50,10 @@ INSTALLED_APPS = [
     'xadmin.apps.XAdminConfig',
 
     # 验证码
-    'captcha'
+    'captcha',
 
+    # 分页器设置
+    'pure_pagination'
 ]
 
 MIDDLEWARE = [
@@ -150,3 +152,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 EMAIL_HOST = 'smtp.163.com'
 EMAIL_HOST_USER = '17855370672@163.com'
 EMAIL_HOST_PASSWORD = 'sx123456'
+
+# 分页器设置
+PAGINATION_SETTINGS = {
+    'PAGE_RANGE_DISPLAYED': 10,
+    'MARGIN_PAGES_DISPLAYED': 2,
+    'SHOW_FIRST_PAGE_WHEN_INVALID': True,
+}

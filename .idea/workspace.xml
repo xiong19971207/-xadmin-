@@ -146,7 +146,8 @@
       <workItem from="1588076466820" duration="3509000" />
       <workItem from="1588125581530" duration="11277000" />
       <workItem from="1588137508179" duration="9172000" />
-      <workItem from="1588212901244" duration="8634000" />
+      <workItem from="1588212901244" duration="11384000" />
+      <workItem from="1588331162007" duration="3935000" />
     </task>
     <servers />
   </component>
@@ -166,22 +167,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588138983878" />
-    <state width="1493" height="286" key="GridCell.Tab.0.bottom" timestamp="1588238255981">
+    <state width="1493" height="284" key="GridCell.Tab.0.bottom" timestamp="1588332930056">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588238255981" />
-    <state width="1493" height="286" key="GridCell.Tab.0.center" timestamp="1588238255981">
+    <state width="1493" height="284" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588332930056" />
+    <state width="1493" height="284" key="GridCell.Tab.0.center" timestamp="1588332930056">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588238255981" />
-    <state width="1493" height="286" key="GridCell.Tab.0.left" timestamp="1588238255981">
+    <state width="1493" height="284" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588332930056" />
+    <state width="1493" height="284" key="GridCell.Tab.0.left" timestamp="1588332930056">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588238255981" />
-    <state width="1493" height="286" key="GridCell.Tab.0.right" timestamp="1588238255981">
+    <state width="1493" height="284" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588332930056" />
+    <state width="1493" height="284" key="GridCell.Tab.0.right" timestamp="1588332930056">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588238255981" />
+    <state width="1493" height="284" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588332930056" />
     <state width="1493" height="372" key="GridCell.Tab.1.bottom" timestamp="1587993595577">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -198,10 +199,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="372" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587993595576" />
-    <state x="270" y="67" key="SettingsEditor" timestamp="1587867779230">
+    <state x="270" y="67" key="SettingsEditor" timestamp="1588240278639">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="67" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587867779230" />
+    <state x="270" y="67" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588240278639" />
     <state x="509" y="0" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1587730718061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
