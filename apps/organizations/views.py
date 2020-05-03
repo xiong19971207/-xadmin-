@@ -12,6 +12,8 @@ class OrgListView(View):
 
         all_orgs = CourseOrg.objects.all()
         all_citys = City.objects.all()
+        # 根据收藏数显示机构
+        hot_orgs = all_orgs.order_by('-fav_nums')[:3]
 
         # 根据机构查询
         category = request.GET.get('ct', '')
@@ -50,4 +52,5 @@ class OrgListView(View):
             'category': category,
             'city_id': city_id,
             'sort': sort,
+            'hot_orgs':hot_orgs,
         })
