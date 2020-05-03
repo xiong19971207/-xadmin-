@@ -1,13 +1,36 @@
-from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
+from django.http import JsonResponse
+from pure_pagination import Paginator, PageNotAnInteger
 from django.shortcuts import render
 
-# Create your views here.
 from django.views.generic.base import View
-
 from apps.organizations.models import CourseOrg, City
+from apps.organizations.forms import AddAskForm
+
+
+class AddAskView(View):
+    """
+    用户咨询页面的视图
+    """
+
+    def post(self, request, *args, **kwargs):
+        user_ask_form = AddAskForm(request.POST)
+        if user_ask_form.is_valid():
+            user_ask_form.save(commit=True)
+            return JsonResponse({
+                "status": "success"
+            })
+        else:
+            return JsonResponse({
+                "status": "fail",
+                "msg": "添加出错"
+            })
 
 
 class OrgListView(View):
+    """
+    授课机构的显示
+    """
+
     def get(self, request, *args, **kwargs):
 
         all_orgs = CourseOrg.objects.all()
@@ -52,5 +75,5 @@ class OrgListView(View):
             'category': category,
             'city_id': city_id,
             'sort': sort,
-            'hot_orgs':hot_orgs,
+            'hot_orgs': hot_orgs,
         })

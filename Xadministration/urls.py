@@ -44,7 +44,8 @@ urlpatterns = [
     path('send_email/', csrf_exempt(SendEmailView.as_view()), name='send_email'),
 
     # 课程机构urls
-    url(r'^org_list/', OrgListView.as_view(), name='org_list'),
+    # url(r'^org_list/', OrgListView.as_view(), name='org_list'),
+    url(r'^org/', include(('apps.organizations.urls', 'organizations'),namespace='org')),
 
     # 配置全局图片显示的URL
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
