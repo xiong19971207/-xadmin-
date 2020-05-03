@@ -29,22 +29,23 @@
                         <li>
                             <h2>机构类别</h2>
                             <div class="cont">
-                                    <a href="?city="><span class="active2">全部</span></a>
+                                    <a href="?city={{ city_id }}"><span {% ifequal category '' %} class="active2" {% endifequal %}>全部</span></a>
 
-                                    <a href="?ct=pxjg&city="><span class="">培训机构</span></a>
+                                    <a href="?ct=pxjg&city={{ city_id }}"><span {% ifequal category 'pxjg' %} class="active2" {% endifequal %}>培训机构</span></a>
 
-                                    <a href="?ct=gx&city="><span class="">高校</span></a>
+                                    <a href="?ct=gx&city={{ city_id }}"><span {% ifequal category 'gx' %} class="active2" {% endifequal %}>高校</span></a>
 
-                                    <a href="?ct=gr&city="><span class="">个人</span></a>
+                                    <a href="?ct=gr&city={{ city_id }}"><span {% ifequal category 'gr' %} class="active2" {% endifequal %}>个人</span></a>
                             </div>
                         </li>
+
                         <li>
                             <h2>所在地区</h2>
                             <div class="more">更多</div>
                             <div class="cont">
-                                <a href="?ct="><span class="active2">全部</span></a>
+                                <a href="?ct={{ category }}"><span class="{% ifequal city_id ''%}active2{% endifequal %}">全部</span></a>
                                     {% for city in all_citys %}
-                                           <a href="?city=1&ct="><span class="">{{ city.name }}</span></a>
+                                           <a href="?city={{city.id}}&ct={{ category }}"><span class="{% ifequal city.id|stringformat:'i' city_id %}active2{% endifequal %}" >{{ city.name }}</span></a>
                                     {% endfor %}
                             </div>
                         </li>
@@ -57,9 +58,9 @@
                 <div class="layout">
                     <div class="head">
                         <ul class="tab_header">
-                            <li class="active"><a href="?ct=&city=">全部</a> </li>
-                            <li class=""><a href="?sort=students&ct=&city=">学习人数 &#8595;</a></li>
-                            <li class=""><a href="?sort=courses&ct=&city=">课程数 &#8595;</a></li>
+                            <li class="{% ifequal sort '' %}active{% endifequal %}"><a href="?ct=&city=">全部</a> </li>
+                            <li class="{% ifequal sort 'students' %}active{% endifequal %}"><a href="?sort=students&ct={{ category }}&city={{ city_id }}">学习人数 &#8595;</a></li>
+                            <li class="{% ifequal sort 'courses' %}active{% endifequal %}"><a href="?sort=courses&ct={{ category }}&city={{ city_id }}">课程数 &#8595;</a></li>
                         </ul>
                     </div>
 

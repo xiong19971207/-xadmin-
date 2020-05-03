@@ -63,7 +63,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -147,7 +147,8 @@
       <workItem from="1588125581530" duration="11277000" />
       <workItem from="1588137508179" duration="9172000" />
       <workItem from="1588212901244" duration="11384000" />
-      <workItem from="1588331162007" duration="3935000" />
+      <workItem from="1588331162007" duration="7586000" />
+      <workItem from="1588471622496" duration="1148000" />
     </task>
     <servers />
   </component>
@@ -167,22 +168,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588138983878" />
-    <state width="1493" height="284" key="GridCell.Tab.0.bottom" timestamp="1588332930056">
+    <state width="1493" height="253" key="GridCell.Tab.0.bottom" timestamp="1588472489711">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="284" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588332930056" />
-    <state width="1493" height="284" key="GridCell.Tab.0.center" timestamp="1588332930056">
+    <state width="1493" height="253" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588472489711" />
+    <state width="1493" height="253" key="GridCell.Tab.0.center" timestamp="1588472489711">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="284" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588332930056" />
-    <state width="1493" height="284" key="GridCell.Tab.0.left" timestamp="1588332930056">
+    <state width="1493" height="253" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588472489711" />
+    <state width="1493" height="253" key="GridCell.Tab.0.left" timestamp="1588472489711">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="284" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588332930056" />
-    <state width="1493" height="284" key="GridCell.Tab.0.right" timestamp="1588332930056">
+    <state width="1493" height="253" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588472489711" />
+    <state width="1493" height="253" key="GridCell.Tab.0.right" timestamp="1588472489711">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="284" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588332930056" />
+    <state width="1493" height="253" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588472489711" />
     <state width="1493" height="372" key="GridCell.Tab.1.bottom" timestamp="1587993595577">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -199,10 +200,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="372" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587993595576" />
-    <state x="270" y="67" key="SettingsEditor" timestamp="1588240278639">
+    <state x="270" y="67" key="SettingsEditor" timestamp="1588471743651">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="67" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588240278639" />
+    <state x="270" y="67" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588471743651" />
     <state x="509" y="0" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1587730718061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
