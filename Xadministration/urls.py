@@ -26,8 +26,6 @@ from django.views.generic import TemplateView
 from Xadministration.settings import MEDIA_ROOT
 from apps.users.views import LoginView, LogoutView, RegisterView, SendEmailView
 
-from apps.users import views as user_views
-
 import xadmin
 from apps.organizations.views import OrgListView
 
@@ -45,7 +43,10 @@ urlpatterns = [
 
     # 课程机构urls
     # url(r'^org_list/', OrgListView.as_view(), name='org_list'),
-    url(r'^org/', include(('apps.organizations.urls', 'organizations'),namespace='org')),
+    url(r'^org/', include(('apps.organizations.urls', 'organizations'), namespace='org')),
+
+    # 用户相关操作
+    url(r'^op/', include(('apps.operation.urls', 'operation'), namespace='op')),
 
     # 配置全局图片显示的URL
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),

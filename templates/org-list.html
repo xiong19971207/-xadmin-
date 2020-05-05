@@ -67,21 +67,21 @@
                     {% for courseorg in all_orgs.object_list %}
                             <dl class="des difdes">
                             <dt>
-                                <a href="{{ MEDIA_URL }}{{ courseorg.image }}">
+                                <a href="{% url 'org:home' courseorg.id %}">
                                     <img src="{{ MEDIA_URL }}{{ courseorg.image }}" width="200" height="120" />
                                 </a>
                             </dt>
 
                             <dd>
                                 <div class="clearfix">
-                                     <a href="org-detail-homepage.html">
+                                     <a href="{% url 'org:home' courseorg.id %}">
                                          <h1>{{ courseorg.name }}</h1>
                                          <div class="pic fl">
                                              {% if  courseorg.is_gold  %}
-                                                   <img src="{% static 'images/authentication.png' %}"/>
+                                                    <img src="{% static 'images/gold.png' %}"/>
                                              {% endif %}
                                              {% if courseorg.is_identification %}
-                                                   <img src="{% static 'images/gold.png' %}"/>
+                                                    <img src="{% static 'images/authentication.png' %}"/>
                                              {% endif %}
                                          </div>
                                      </a>
@@ -182,15 +182,15 @@
                 $.ajax({
                     cache: false,
                     type: "POST",
-                    url: "/org/add_ask/",
+                    url: "{% url 'org:list' %}",
                     data: $('#jsStayForm').serialize(),
                     async: true,
                     success: function (data) {
-                        if (data.status == 'success') {
+                        if (data.status === 'success') {
                             $('#jsStayForm')[0].reset();
                             $('#jsCompanyTips').html("");
                             alert("提交成功")
-                        } else if (data.status == 'fail') {
+                        } else if (data.status === 'fail') {
                             $('#jsCompanyTips').html(data.msg)
                         }
                     },

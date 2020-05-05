@@ -36,7 +36,7 @@ class CourseOrg(BaseModel):
     city = models.ForeignKey(City, on_delete=models.CASCADE, verbose_name="所在城市")
 
     is_gold = models.BooleanField(default=False, verbose_name='是否金牌')
-    is_identification = models.BooleanField(default=False,verbose_name='是否认证')
+    is_identification = models.BooleanField(default=False, verbose_name='是否认证')
 
     def __str__(self):
         return self.name
@@ -73,7 +73,13 @@ class Teacher(BaseModel):
     def __str__(self):
         return self.name
 
-
+    def get_teacher_courses(self):
+        """
+        自定义方法求出教师的课程数
+        :return:
+        """
+        teacher_courses = self.course_set.all().count()
+        return teacher_courses
 
     class Meta:
         verbose_name = "讲师"

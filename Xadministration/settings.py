@@ -80,6 +80,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 这个中间件会把设置的MEDIA_URL返回给前端页面，这样我们就不用每次在后端传递了
                 'django.template.context_processors.media',
             ],
         },
