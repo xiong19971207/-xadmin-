@@ -17,10 +17,15 @@ class LoginView(View):
         # 這一步是把vcode_form傳到前端去，然後vcode_form.captcha显示验证码
         vcode_form = DynamicLoginForm()
 
+        next = request.GET.get('next', '')
+
         # 判断用户是否登录
         if request.user.is_authenticated:
             return redirect(reverse('index'))
-        return render(request, 'login.html', {'vcode_form': vcode_form})
+        return render(request, 'login.html', {
+            'vcode_form': vcode_form,
+            'next': next
+        })
 
     def post(self, request, *args, **kwargs):
 
@@ -34,9 +39,17 @@ class LoginView(View):
 
             # Django中自带的方法，用以创建一个自己的UserProfile对象
             user = authenticate(username=username, password=password)
+
             if user:
+
                 # login这个方法表示用户已经登陆，好像还能把数据传到前端页面
                 login(request, user)
+
+                # 没登录之前查看内容，必须登陆。
+                # 登陆之后跳转到浏览前的位置
+                next = request.GET.get('next', '')
+                if next:
+                    return redirect(next)
                 return redirect(reverse('index'))
             else:
                 return render(request, 'login.html', {'msg': '用户名或密码错误', 'forms_check': forms_check})

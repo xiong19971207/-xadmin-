@@ -28,7 +28,7 @@ class Course(BaseModel):
     detail = models.TextField(verbose_name='课程详情')
     image = models.ImageField(upload_to="courses/%Y/%m", verbose_name="封面图", max_length=100)
 
-    is_classics = models.BooleanField(default=False,verbose_name='是否是经典')
+    is_classics = models.BooleanField(default=False, verbose_name='是否是经典')
 
     class Meta:
         verbose_name = "课程信息"
@@ -37,6 +37,18 @@ class Course(BaseModel):
     def __str__(self):
         # 添加字段时返回名字
         return self.name
+
+
+class CourseTag(BaseModel):
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, verbose_name='课程')
+    tag = models.CharField(max_length=100, verbose_name='标签')
+
+    class Meta:
+        verbose_name = "课程标签"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.tag
 
 
 class Lesson(BaseModel):
@@ -59,7 +71,7 @@ class Video(BaseModel):
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, verbose_name='关联章节')
     name = models.CharField(max_length=50, verbose_name='视频名')
     learn_times = models.IntegerField(default=0, verbose_name="学习时长(分钟数)")
-    url = models.CharField(max_length=100, verbose_name='播放地址')
+    url = models.CharField(max_length=1000, verbose_name='播放地址')
 
     class Meta:
         verbose_name = "课程视频"

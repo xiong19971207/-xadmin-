@@ -48,9 +48,13 @@ urlpatterns = [
     # 用户相关操作
     url(r'^op/', include(('apps.operation.urls', 'operation'), namespace='op')),
 
+    # 公开课
+    url(r'^course/', include(('apps.courses.urls', 'courses'), namespace='course')),
+
     # 配置全局图片显示的URL
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     # 加入图形验证码
     url(r'^captcha/', include('captcha.urls')),
+
 
 ]

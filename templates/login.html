@@ -72,7 +72,7 @@
                 </div>
 
                  <!-- action表示表单内容提交到何地，不写默认提交给自己-->
-                <form class="tab-form" action="{% url 'login' %} " method="post" autocomplete="off" id="form1">
+                <form class="tab-form" action="{% url 'login' %}?next={{ next }} " method="post" autocomplete="off" id="form1">
                     <div class="form-group marb20 {% if forms_check.errors.values %} errorput {% endif %}">
                         <input name="username" id="account_l" value="{{ forms_check.username.value }}" type="text" placeholder="手机号/邮箱" />
                     </div>

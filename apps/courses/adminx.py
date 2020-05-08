@@ -1,6 +1,6 @@
 import xadmin
 
-from apps.courses.models import Course, Lesson, Video, CourseResource
+from apps.courses.models import Course, Lesson, Video, CourseResource, CourseTag
 
 
 # xadmin 全局配置，可以写在任意adminx.py文件中
@@ -15,7 +15,7 @@ class BaseSettings(object):
     # 可以为xadmin添加主题
 
     enable_themes = True
-    
+
     # use_bootswatch = True
 
 
@@ -48,10 +48,17 @@ class CourseResourceAdmin(object):
     list_filter = ['course', 'name', 'file', 'add_times']
 
 
+class CourseTagAdmin(object):
+    list_display = ['course', 'tag', 'add_times']
+    search_fields = ['course', 'tag']
+    list_filter = ['course', 'tag', 'add_times']
+
+
 xadmin.site.register(Course, CourseAdmin)
 xadmin.site.register(Lesson, LessonAdmin)
 xadmin.site.register(Video, VideoAdmin)
 xadmin.site.register(CourseResource, CourseResourceAdmin)
+xadmin.site.register(CourseTag, CourseTagAdmin)
 
 # 配置全局xadmin样式
 xadmin.site.register(xadmin.views.CommAdminView, GlobalSettings)
