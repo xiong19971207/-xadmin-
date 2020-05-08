@@ -71,7 +71,7 @@
 
             <div class="middle">
                 <div class="wp">
-                    <a href="index.html"><img class="fl" src="/static/images/logo.jpg"/></a>
+                    <a href="{% url 'login' %}"><img class="fl" src="/static/images/logo.jpg"/></a>
                     <div class="searchbox fr">
                         <div class="selectContainer fl">
                                     <span class="selectOption" id="jsSelectOption" data-value="course">
@@ -100,10 +100,10 @@
                                     公开课<img class="hot" src="/static/images/nav_hot.png">
                                 </a>
                             </li>
-                            <li>
-                                <a href="teachers-list.html">授课教师</a>
+                            <li class="{% if request.path|slice:'13'  == '/org/teachers' %}active{% endif %}">
+                                <a href="{% url 'org:teachers' %}">授课教师</a>
                             </li>
-                            <li class="{% if request.path|slice:'4'  == '/org' %}active{% endif %}"><a
+                            <li class="{% if request.path|slice:'13'  != '/org/teachers' %}{% if request.path|slice:'4'  == '/org' %}active{% endif %}{% endif %}"><a
                                     href="{% url 'org:list' %}">授课机构</a></li>
                         </ul>
                     </div>

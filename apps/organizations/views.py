@@ -3,9 +3,64 @@ from pure_pagination import Paginator, PageNotAnInteger
 from django.shortcuts import render
 
 from django.views.generic.base import View
-from apps.organizations.models import CourseOrg, City
+from apps.organizations.models import CourseOrg, City, Teacher
 from apps.organizations.forms import AddAskForm
 from apps.operation.models import UserFavorite
+
+
+class TeacherDetailView(View):
+    def get(self, request, teacher_id, *args, **kwargs):
+        # 当前老师
+        teacher = Teacher.objects.get(id=int(teacher_id))
+
+        # 老师热度榜
+        hot_teachers = Teacher.objects.all().order_by('-click_nums')
+
+        # 判断收藏还是没有收藏
+        has_teacher_fav = False
+        has_org_fav = False
+        if request.user.is_authenticated:
+            if UserFavorite.objects.filter(user=request.user, fav_id=teacher.id, fav_type=3):
+                has_teacher_fav = True
+            if UserFavorite.objects.filter(user=request.user, fav_id=teacher.org.id, fav_type=2):
+                has_org_fav = True
+
+        return render(request, 'teacher-detail.html', {
+            'teacher': teacher,
+            "hot_teachers": hot_teachers,
+            "has_teacher_fav": has_teacher_fav,
+            "has_org_fav": has_org_fav
+        })
+
+
+class TeacherListView(View):
+    def get(self, request, *args, **kwargs):
+        teachers = Teacher.objects.all()
+
+        # 所有教师数量
+        teachers_nums = teachers.count()
+
+        # 热度老师
+        hot_teachers = teachers.order_by('-click_nums')
+        # 按热度对老师排序
+        sort = request.GET.get('sort', '')
+        if sort == 'hot':
+            teachers = teachers.order_by('-click_nums')
+
+        # 设置分页器
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+        p = Paginator(teachers, per_page=1, request=request)
+        all_teachers = p.page(page)
+
+        return render(request, 'teachers-list.html', {
+            'all_teachers': all_teachers,
+            'teachers_nums': teachers_nums,
+            'hot_teachers': hot_teachers,
+            'sort': sort
+        })
 
 
 class OrgDescView(View):
