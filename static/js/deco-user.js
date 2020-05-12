@@ -50,7 +50,7 @@ var verify = verifyDialogSubmit(
         cache: false,
         type: 'post',
         dataType:'json',
-        url:"/users/update_email/ ",
+        url:"/users/update/email/ ",
         data:$('#jsChangeEmailForm').serialize(),
         async: true,
         beforeSend:function(XMLHttpRequest){
@@ -59,8 +59,8 @@ var verify = verifyDialogSubmit(
             $("#jsChangeEmailTips").html("验证中...").show(500);
         },
         success: function(data) {
-            if(data.email){
-                Dml.fun.showValidateError($('#jsChangeEmail'), data.email);
+            if(data.status){
+                Dml.fun.showValidateError($('#jsChangeEmail'), data.status);
             }else if(data.status == "success"){
                 Dml.fun.showErrorTips($('#jsChangePhoneTips'), "邮箱信息更新成功");
                 setTimeout(function(){location.reload();},1000);
@@ -79,7 +79,7 @@ var verify = verifyDialogSubmit(
 function changePhoneSubmit($btn){
     var verify = verifyDialogSubmit(
         [
-            {id: '#jsChangePhone', tips: Dml.Msg.epPhone, errorTips: Dml.Msg.erPhone, regName: 'phone', require: true},
+            {id: '#jsChangePhone', tips: Dml.Msg.epMail, errorTips: Dml.Msg.erMail, regName: 'email', require: true},
             {id: '#jsChangePhoneCode', tips: Dml.Msg.epPhCode, errorTips: Dml.Msg.erPhCode, regName: 'phoneCode',require: true}
         ]
     );
@@ -90,7 +90,7 @@ function changePhoneSubmit($btn){
         cache: false,
         type: 'post',
         dataType:'json',
-        url:"/users/update/mobile/",
+        url:"/users/update/email/",
         data:$('#jsChangePhoneForm').serialize(),
         beforeSend:function(XMLHttpRequest){
             $btn.val("发送中...");
@@ -102,7 +102,7 @@ function changePhoneSubmit($btn){
             if(data.mobile){
                 Dml.fun.showValidateError($('#jsChangePhoneCode'), data.mobile);
             }else if(data.mobile_code){
-                Dml.fun.showValidateError($('#jsChangePhoneCode'), data.mobile_code);
+                Dml.fun.showValidateError($('#jsChangePhoneCode'), data.code);
             }else if(data.captcha){
                 Dml.fun.showValidateError($('#jsChangePhone'), data.captcha);
             }else if(data.status == "success"){
@@ -123,7 +123,7 @@ function changePhoneSubmit($btn){
 function sendCodeChangePhone($btn){
     var verify = verifyDialogSubmit(
         [
-            {id: '#jsChangePhone', tips: Dml.Msg.epPhone, errorTips: Dml.Msg.erPhone, regName: 'phone', require: true},
+            {id: '#jsChangePhone', tips: Dml.Msg.epMail, errorTips: Dml.Msg.erMail, regName: 'email', require: true},
             {id: '#jsChangePhoneForm #id_captcha_1', tips: Dml.Msg.epVerifyCode, errorTips: Dml.Msg.erVerifyCode, regName: 'verifyCode', require: true}
         ]
     );
@@ -135,10 +135,10 @@ function sendCodeChangePhone($btn){
         cache: false,
         type: 'post',
         dataType:'json',
-        url:"/send_sms/",
+        url:"/send_email/",
         // data:$('#jsChangePhoneForm').serialize(),
         data:{
-                mobile:$("#jsChangePhone").val(),
+                email:$("#jsChangePhone").val(),
                 captcha_1:$("#id_captcha_1").val(),
                 captcha_0:$('#id_captcha_0').val(),
         },
@@ -147,13 +147,13 @@ function sendCodeChangePhone($btn){
             $btn.attr('disabled',true);
         },
         success: function(data){
-            if(data.mobile){
-                Dml.fun.showValidateError($('#jsChangePhone'), data.mobile);
+            if(data.email){
+                Dml.fun.showValidateError($('#jsChangePhone'), data.email);
             }else if(data.captcha){
                 Dml.fun.showValidateError($('#jsChangePhoneForm #id_captcha_1'), data.captcha);
-            }else if(data.status == 'success'){
+            }else if(data.status === 'success'){
                 Dml.fun.showErrorTips($('#jsChangePhoneTips'), "短信验证码已发送");
-            }else if(data.status == 'fail'){
+            }else if(data.status === 'fail'){
                 Dml.fun.showValidateError($('#jsChangePhone'), "短信验证码发送失败");
             }
         },

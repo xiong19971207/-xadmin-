@@ -23,7 +23,7 @@ class CommentView(View):
             course = comment_form.cleaned_data['course']
             comments = comment_form.cleaned_data['comments']
 
-            comment = CourseComments(user=request.user,course=course)
+            comment = CourseComments(user=request.user, course=course)
             comment.comments = comments
             comment.save()
 
@@ -36,7 +36,6 @@ class CommentView(View):
                 'status': 'fail',
                 'msg': '参数错误'
             })
-
 
 
 class AddFavView(View):

@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
 from apps.organizations.views import OrgListView, AddAskView, OrgHomeView, OrgTeacherView, OrgCourseView, OrgDescView
-from apps.organizations.views import TeacherListView,TeacherDetailView
+from apps.organizations.views import TeacherListView, TeacherDetailView
 
 urlpatterns = [
     # 授课机构
@@ -25,6 +25,5 @@ urlpatterns = [
 
     # 教师详情
     url(r'^teachers/(?P<teacher_id>\d+)/$', TeacherDetailView.as_view(), name='teacher_detail'),
-
 
 ]

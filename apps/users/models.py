@@ -23,7 +23,7 @@ class UserProfile(AbstractUser):
     )
 
     nickname = models.CharField(max_length=10, null=True, default='', verbose_name='昵称')
-    birthday = models.DateField(max_length=12, blank=True, null=True,verbose_name='生日')
+    birthday = models.DateField(max_length=12, blank=True, null=True, verbose_name='生日')
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES, verbose_name='性别')
     address = models.CharField(max_length=30, default='', verbose_name='地址')
     mobile = models.CharField(max_length=11, verbose_name='手机号')
@@ -38,3 +38,7 @@ class UserProfile(AbstractUser):
             return self.nickname
         else:
             return self.username
+
+    def unread_message(self):
+        # 有多少未读消息
+        return self.usermessage_set.all().filter(has_read=False).count()

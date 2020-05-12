@@ -1,14 +1,199 @@
 import redis
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
 
 from django.views.generic.base import View
 
-from apps.users.forms import LoginForms, DynamicLoginForm, RegisterForms
-from apps.users.logics import send_email, gen_random_code
+from apps.users.forms import LoginForms, DynamicLoginForm, RegisterForms, UploadImgForm
+from apps.users.forms import ChangeEmailForm, UserInfoForm, UserPwdForm
+from apps.users.logics import send_email
 from apps.users.models import UserProfile
+from apps.operation.models import UserFavorite, UserCourse, UserMessage
+from apps.organizations.models import CourseOrg, Teacher
+from apps.courses.models import Course
+
+from pure_pagination import Paginator, PageNotAnInteger
+
+
+class MessageView(LoginRequiredMixin, View):
+    login_url = '/login/'
+
+    def get(self, request):
+        current_page = 'message'
+        # 获取用户消息
+        message_list = []
+        messages = UserMessage.objects.filter(user=request.user)
+        for message in messages:
+            message_list.append(message)
+
+        # 进入之后变成True
+        for message in message_list:
+            message.has_read = True
+            message.save()
+
+        # 设置分页器
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+        p = Paginator(message_list, per_page=1, request=request)
+        all_messages = p.page(page)
+
+        return render(request, 'usercenter-message.html', {
+            'current_page': current_page,
+            'message_list': all_messages
+        })
+
+
+class UserFavTeacherView(LoginRequiredMixin, View):
+    login_url = '/login/'
+
+    def get(self, request):
+        # 用户收藏的授课机构
+        user_fav_teachers = UserFavorite.objects.filter(user=request.user, fav_type=3)
+        teacher_list = []
+        for teacher in user_fav_teachers:
+            # 通过id找出授课机构
+            teachers = Teacher.objects.get(id=teacher.fav_id)
+            teacher_list.append(teachers)
+
+        current_page = 'myfavorg'
+
+        return render(request, 'usercenter-fav-teacher.html', {
+            'teacher_list': teacher_list,
+            'current_page': current_page
+        })
+
+
+class UserFavCourseView(LoginRequiredMixin, View):
+    login_url = '/login/'
+
+    def get(self, request):
+        # 用户收藏的教师
+        user_fav_courses = UserFavorite.objects.filter(user=request.user, fav_type=1)
+        course_list = []
+        for course in user_fav_courses:
+            # 通过id找出授课机构
+            courses = Course.objects.get(id=course.fav_id)
+            course_list.append(courses)
+
+        current_page = 'myfavorg'
+
+        return render(request, 'usercenter-fav-course.html', {
+            'course_list': course_list,
+            'current_page': current_page
+        })
+
+
+class UserFavOrgView(LoginRequiredMixin, View):
+    login_url = '/login/'
+
+    def get(self, request):
+        # 用户收藏的授课机构
+        user_fav_orgs = UserFavorite.objects.filter(user=request.user, fav_type=2)
+        org_list = []
+        for org in user_fav_orgs:
+            # 通过id找出授课机构
+            courseorg = CourseOrg.objects.get(id=org.fav_id)
+            org_list.append(courseorg)
+
+        current_page = 'myfavorg'
+
+        return render(request, 'usercenter-fav-org.html', {
+            'org_list': org_list,
+            'current_page': current_page
+        })
+
+
+class UserMycourseView(LoginRequiredMixin, View):
+    login_url = '/login/'
+
+    def get(self, request):
+        # 我的课程
+        my_courses = UserCourse.objects.filter(user=request.user)
+        # 选中状态
+        current_page = 'mycourse'
+        return render(request, 'usercenter-mycourse.html', {
+            'my_courses': my_courses,
+            'current_page': current_page
+        })
+
+
+class ChangeEmailView(LoginRequiredMixin, View):
+    login_url = '/login/'
+
+    def post(self, request, *args, **kwargs):
+        user_email_form = ChangeEmailForm(request.POST)
+        if user_email_form.is_valid():
+            email = user_email_form.cleaned_data['email']
+            user = request.user
+            user.email = email
+            user.save()
+            data = {
+                'status': 'success'
+            }
+            return render(request, 'usercenter-info.html', context=data)
+        return render(request, 'usercenter-info.html', {
+            'status': 'fail'
+        })
+
+
+class UpdatePwdView(View):
+    def post(self, request, *args, **kwargs):
+        user_pwd_form = UserPwdForm(request.POST)
+        if user_pwd_form.is_valid():
+            user = request.user
+            pwd = request.POST.get('password1')
+            user.set_password(pwd)
+            user.save()
+            return JsonResponse({
+                'status': 'success'
+            })
+        else:
+            return JsonResponse(user_pwd_form.errors)
+
+
+class UploadImgView(View):
+    def post(self, request, *args, **kwargs):
+        # instance 指定修改那个实例
+        user_img_form = UploadImgForm(request.POST, files=request.FILES, instance=request.user)
+        if user_img_form.is_valid():
+            user_img_form.save()
+            return JsonResponse({
+                'status': 'success'
+            })
+        else:
+            return JsonResponse({
+                'status': 'fail'
+            })
+
+
+class UserInfoView(LoginRequiredMixin, View):
+    login_url = '/login/'
+
+    def get(self, request, *args, **kwargs):
+
+        # 验证码
+        captcha_form = RegisterForms()
+        # 选中状态
+        current_page = 'info'
+        return render(request, 'usercenter-info.html', {
+            'captcha_form': captcha_form,
+            "current_page": current_page
+        })
+
+    def post(self, request, *args, **kwargs):
+        user_info_form = UserInfoForm(request.POST, instance=request.user)
+        if user_info_form.is_valid():
+            user_info_form.save()
+            return JsonResponse({
+                "status": "success"
+            })
+        else:
+            return JsonResponse(user_info_form.errors)
 
 
 class LoginView(View):

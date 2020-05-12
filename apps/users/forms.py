@@ -1,6 +1,42 @@
 import redis
 from captcha.fields import CaptchaField
 from django import forms
+from django.http import JsonResponse
+
+from apps.users.models import UserProfile
+
+
+class ChangeEmailForm(forms.Form):
+    """
+        验证email和验证码
+    """
+    email = forms.CharField(required=True, min_length=8)
+    captcha = CaptchaField()
+    code = forms.CharField(required=True, max_length=4, min_length=4)
+
+
+class UserPwdForm(forms.Form):
+    password1 = forms.CharField(min_length=5, required=True)
+    password2 = forms.CharField(min_length=5, required=True)
+
+    def clean(self):
+        password1 = self.cleaned_data['password1']
+        password2 = self.cleaned_data['password2']
+        if password1 != password2:
+            raise forms.ValidationError("密码不一致")
+        return self.cleaned_data
+
+
+class UserInfoForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ['nickname', 'birthday', 'address', 'gender']
+
+
+class UploadImgForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ['image']
 
 
 class LoginForms(forms.Form):

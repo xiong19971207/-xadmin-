@@ -147,7 +147,7 @@ class CourseDetailView(View):
         if request.user.is_authenticated:
             if UserFavorite.objects.filter(user=request.user, fav_id=course.id, fav_type=1):
                 is_fav_course = True
-            if UserFavorite.objects.filter(user=request.user, fav_id=course.id, fav_type=2):
+            if UserFavorite.objects.filter(user=request.user, fav_id=course.course_org.id, fav_type=2):
                 is_fav_org = True
 
         # 相似课程

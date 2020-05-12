@@ -7,5 +7,13 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/xadmin?serverTimezone=Asia/Shanghai</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Django default" uuid="700ab6b0-0495-4b73-acac-b71ad133e59e">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/Xadministration/settings.py</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3306/xadmin</jdbc-url>
+    </data-source>
   </component>
 </project>

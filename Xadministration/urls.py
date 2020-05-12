@@ -51,6 +51,9 @@ urlpatterns = [
     # 公开课
     url(r'^course/', include(('apps.courses.urls', 'courses'), namespace='course')),
 
+    # 用户个人中心
+    url(r'^users/', include(('apps.users.urls', 'users'), namespace='users')),
+
     # 配置全局图片显示的URL
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     # 加入图形验证码

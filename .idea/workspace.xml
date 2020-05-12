@@ -7,64 +7,44 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="xadmin" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="xadmin" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="xadmin" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="xadmin: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-    </expand>
-    <select />
-  </component>
-  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" module-name="Xadministration" is-module-sdk="true">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+    <option name="myUseModuleSdk" value="true" />
+    <option name="myModuleName" value="Xadministration" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1ayjsl7UNfAlJq5Ax60WHhhODqw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resources/前端html源码/html/usercenter-info.html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="Xadministration" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="Xadministration" />
+      </console-settings>
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -78,7 +58,7 @@
       <recent name="C:\Users\dell\Desktop\Xadministration" />
     </key>
   </component>
-  <component name="RunManager" selected="Django server.Xadministration">
+  <component name="RunManager" selected="Django Server.Xadministration">
     <configuration name="logics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Xadministration" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -157,85 +137,108 @@
       <workItem from="1588770718457" duration="807000" />
       <workItem from="1588812421292" duration="19971000" />
       <workItem from="1588899216617" duration="25173000" />
+      <workItem from="1588945770622" duration="209000" />
+      <workItem from="1588947124222" duration="636000" />
+      <workItem from="1588947785056" duration="56000" />
+      <workItem from="1588947861489" duration="562000" />
+      <workItem from="1588948511623" duration="626000" />
+      <workItem from="1588949154549" duration="79000" />
+      <workItem from="1588983383513" duration="832000" />
+      <workItem from="1588987730862" duration="7196000" />
+      <workItem from="1589008960358" duration="14000" />
+      <workItem from="1589027512942" duration="27000" />
+      <workItem from="1589028752851" duration="2211000" />
+      <workItem from="1589072427158" duration="27796000" />
+      <workItem from="1589162476342" duration="16867000" />
+      <workItem from="1589246268759" duration="12020000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Notifications" timestamp="1587737300094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="74" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1587737300094" />
-    <state x="361" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588219433434">
+    <state x="361" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588983546065">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1588219433434" />
-    <state x="524" y="119" key="#xdebugger.evaluate" timestamp="1588493416942">
+    <state x="361" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1588983546065" />
+    <state x="633" y="159" key="#xdebugger.XInspectDialog" timestamp="1589087971500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="524" y="119" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1588493416942" />
-    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1588820104325">
+    <state x="633" y="159" key="#xdebugger.XInspectDialog/0.0.1536.824@0.0.1536.824" timestamp="1589087971500" />
+    <state x="524" y="119" key="#xdebugger.evaluate" timestamp="1589087672178">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588820104325" />
-    <state width="1493" height="271" key="GridCell.Tab.0.bottom" timestamp="1588945067782">
+    <state x="524" y="119" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1589087672178" />
+    <state width="512" height="582" key="DebuggerActiveHint" timestamp="1589273118148">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588945067782" />
-    <state width="1493" height="271" key="GridCell.Tab.0.center" timestamp="1588945067782">
+    <state width="512" height="582" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1589273118148" />
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1589102601206">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588945067782" />
-    <state width="1493" height="271" key="GridCell.Tab.0.left" timestamp="1588945067782">
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589102601206" />
+    <state width="1483" height="389" key="GridCell.Tab.0.bottom" timestamp="1589289786904">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588945067782" />
-    <state width="1493" height="271" key="GridCell.Tab.0.right" timestamp="1588945067782">
+    <state width="1483" height="389" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589289786904" />
+    <state width="1483" height="389" key="GridCell.Tab.0.center" timestamp="1589289786904">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588945067782" />
-    <state width="1493" height="271" key="GridCell.Tab.1.bottom" timestamp="1588945067782">
+    <state width="1483" height="389" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589289786904" />
+    <state width="1483" height="389" key="GridCell.Tab.0.left" timestamp="1589289786903">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588945067782" />
-    <state width="1493" height="271" key="GridCell.Tab.1.center" timestamp="1588945067782">
+    <state width="1483" height="389" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589289786903" />
+    <state width="1483" height="389" key="GridCell.Tab.0.right" timestamp="1589289786904">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588945067782" />
-    <state width="1493" height="271" key="GridCell.Tab.1.left" timestamp="1588945067782">
+    <state width="1483" height="389" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589289786904" />
+    <state width="1483" height="282" key="GridCell.Tab.1.bottom" timestamp="1589273137998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588945067782" />
-    <state width="1493" height="271" key="GridCell.Tab.1.right" timestamp="1588945067782">
+    <state width="1483" height="282" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589273137998" />
+    <state width="1483" height="282" key="GridCell.Tab.1.center" timestamp="1589273137997">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588945067782" />
-    <state x="214" y="50" key="SettingsEditor" timestamp="1588771517869">
+    <state width="1483" height="282" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1589273137997" />
+    <state width="1483" height="282" key="GridCell.Tab.1.left" timestamp="1589273137997">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="214" y="50" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588771517869" />
+    <state width="1483" height="282" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1589273137997" />
+    <state width="1483" height="282" key="GridCell.Tab.1.right" timestamp="1589273137998">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1483" height="282" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589273137998" />
+    <state x="313" y="72" key="SettingsEditor" timestamp="1589171733414">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="313" y="72" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589171733414" />
     <state x="509" y="0" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1587730718061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="509" y="0" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824@0.0.1536.824" timestamp="1587730718061" />
-    <state x="349" y="71" key="com.intellij.database.dbimport.ImportDialog" timestamp="1587969492355">
+    <state x="349" y="0" key="com.intellij.database.dbimport.ImportDialog" timestamp="1589182725608">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="71" key="com.intellij.database.dbimport.ImportDialog/0.0.1536.824@0.0.1536.824" timestamp="1587969492355" />
-    <state x="438" y="52" width="621" height="734" key="find.popup" timestamp="1588904649712">
+    <state x="349" y="0" key="com.intellij.database.dbimport.ImportDialog/0.0.1536.824@0.0.1536.824" timestamp="1589182725608" />
+    <state x="350" y="64" width="621" height="734" key="find.popup" timestamp="1589116930281">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="438" y="52" width="621" height="734" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1588904649712" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588598589853">
+    <state x="350" y="64" width="621" height="734" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1589116930281" />
+    <state x="431" y="145" width="840" height="678" key="search.everywhere.popup" timestamp="1589180964811">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588598589853" />
+    <state x="431" y="145" width="840" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589180964811" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="Python.DjangoServer">
+        <watch expression="request" language="Python" />
         <watch expression="request" />
       </configuration>
     </watches-manager>
