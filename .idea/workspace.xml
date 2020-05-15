@@ -31,12 +31,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resources/前端html源码/html/usercenter-info.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -47,9 +47,6 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dell\Desktop\Xadministration\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dell\Desktop\Xadministration\templates" />
       <recent name="C:\Users\dell\Desktop\Xadministration\media" />
@@ -57,9 +54,12 @@
       <recent name="C:\Users\dell\Desktop\Xadministration\static" />
       <recent name="C:\Users\dell\Desktop\Xadministration" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dell\Desktop\Xadministration\templates" />
+    </key>
   </component>
   <component name="RunManager" selected="Django Server.Xadministration">
-    <configuration name="logics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="logics" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Xadministration" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -105,11 +105,6 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.logics" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -150,7 +145,13 @@
       <workItem from="1589028752851" duration="2211000" />
       <workItem from="1589072427158" duration="27796000" />
       <workItem from="1589162476342" duration="16867000" />
-      <workItem from="1589246268759" duration="12020000" />
+      <workItem from="1589246268759" duration="12871000" />
+      <workItem from="1589332222036" duration="5316000" />
+      <workItem from="1589375170322" duration="236000" />
+      <workItem from="1589414798097" duration="2752000" />
+      <workItem from="1589417925629" duration="2126000" />
+      <workItem from="1589437530485" duration="11463000" />
+      <workItem from="1589525977561" duration="5344000" />
     </task>
     <servers />
   </component>
@@ -162,10 +163,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="74" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1587737300094" />
-    <state x="361" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588983546065">
+    <state x="277" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589526009691">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1588983546065" />
+    <state x="277" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1589526009691" />
     <state x="633" y="159" key="#xdebugger.XInspectDialog" timestamp="1589087971500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -178,46 +179,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="512" height="582" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1589273118148" />
-    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1589102601206">
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1589375405367">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589102601206" />
-    <state width="1483" height="389" key="GridCell.Tab.0.bottom" timestamp="1589289786904">
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589375405367" />
+    <state width="1483" height="331" key="GridCell.Tab.0.bottom" timestamp="1589533505903">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="389" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589289786904" />
-    <state width="1483" height="389" key="GridCell.Tab.0.center" timestamp="1589289786904">
+    <state width="1483" height="331" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589533505903" />
+    <state width="1483" height="331" key="GridCell.Tab.0.center" timestamp="1589533505903">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="389" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589289786904" />
-    <state width="1483" height="389" key="GridCell.Tab.0.left" timestamp="1589289786903">
+    <state width="1483" height="331" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589533505903" />
+    <state width="1483" height="331" key="GridCell.Tab.0.left" timestamp="1589533505903">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="389" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589289786903" />
-    <state width="1483" height="389" key="GridCell.Tab.0.right" timestamp="1589289786904">
+    <state width="1483" height="331" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589533505903" />
+    <state width="1483" height="331" key="GridCell.Tab.0.right" timestamp="1589533505903">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="389" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589289786904" />
-    <state width="1483" height="282" key="GridCell.Tab.1.bottom" timestamp="1589273137998">
+    <state width="1483" height="331" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589533505903" />
+    <state width="1483" height="326" key="GridCell.Tab.1.bottom" timestamp="1589528463519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="282" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589273137998" />
-    <state width="1483" height="282" key="GridCell.Tab.1.center" timestamp="1589273137997">
+    <state width="1483" height="326" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589528463519" />
+    <state width="1483" height="326" key="GridCell.Tab.1.center" timestamp="1589528463519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="282" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1589273137997" />
-    <state width="1483" height="282" key="GridCell.Tab.1.left" timestamp="1589273137997">
+    <state width="1483" height="326" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1589528463519" />
+    <state width="1483" height="326" key="GridCell.Tab.1.left" timestamp="1589528463519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="282" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1589273137997" />
-    <state width="1483" height="282" key="GridCell.Tab.1.right" timestamp="1589273137998">
+    <state width="1483" height="326" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1589528463519" />
+    <state width="1483" height="326" key="GridCell.Tab.1.right" timestamp="1589528463519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="282" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589273137998" />
-    <state x="313" y="72" key="SettingsEditor" timestamp="1589171733414">
+    <state width="1483" height="326" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589528463519" />
+    <state x="223" y="0" key="SettingsEditor" timestamp="1589415153012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="313" y="72" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589171733414" />
+    <state x="223" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589415153012" />
     <state x="509" y="0" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1587730718061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -226,16 +227,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="0" key="com.intellij.database.dbimport.ImportDialog/0.0.1536.824@0.0.1536.824" timestamp="1589182725608" />
-    <state x="350" y="64" width="621" height="734" key="find.popup" timestamp="1589116930281">
+    <state x="350" y="64" width="715" height="734" key="find.popup" timestamp="1589424987613">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="350" y="64" width="621" height="734" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1589116930281" />
-    <state x="431" y="145" width="840" height="678" key="search.everywhere.popup" timestamp="1589180964811">
+    <state x="350" y="64" width="715" height="734" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1589424987613" />
+    <state x="431" y="145" width="840" height="678" key="search.everywhere.popup" timestamp="1589424978040">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="840" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589180964811" />
+    <state x="431" y="145" width="840" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589424978040" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/organizations/views.py</url>
+          <line>238</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
         <watch expression="request" language="Python" />

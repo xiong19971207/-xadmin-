@@ -23,8 +23,8 @@ from django.views.static import serve
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView
 
-from Xadministration.settings import MEDIA_ROOT
-from apps.users.views import LoginView, LogoutView, RegisterView, SendEmailView
+from Xadministration.settings import MEDIA_ROOT, STATIC_ROOT
+from apps.users.views import LoginView, LogoutView, RegisterView, SendEmailView, IndexView
 
 import xadmin
 from apps.organizations.views import OrgListView
@@ -34,7 +34,7 @@ urlpatterns = [
     path('xadmin/', xadmin.site.urls),
 
     # 首页、登陆、注册
-    path('', TemplateView.as_view(template_name='index.html'), name='index'),
+    path('', IndexView.as_view(), name='index'),
     # 利用CBV编程：class base view
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
@@ -56,6 +56,7 @@ urlpatterns = [
 
     # 配置全局图片显示的URL
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
+    url(r'^static/(?P<path>.*)$', serve, {'document_root': STATIC_ROOT}),
     # 加入图形验证码
     url(r'^captcha/', include('captcha.urls')),
 

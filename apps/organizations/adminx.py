@@ -3,6 +3,7 @@ import xadmin
 from apps.organizations.models import Teacher, City, CourseOrg
 
 
+
 class TeacherAdmin(object):
 
     list_display = ['org', 'name', 'work_years', 'work_company']

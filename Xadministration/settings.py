@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1fk2sv&d%d*w9%o(y_3-$hh_&ytglp!9z-k_-jm2+i4xk#_0+$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -82,6 +82,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 # 这个中间件会把设置的MEDIA_URL返回给前端页面，这样我们就不用每次在后端传递了
                 'django.template.context_processors.media',
+                'django.template.context_processors.static',
                 # 上下文管理器
                 # 'apps.users.views.message_nums'
             ],
@@ -144,7 +145,9 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR, os.path.join('static')]
+# 下面两个只能存在一个
+# STATICFILES_DIRS = [BASE_DIR, os.path.join('static')]
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 # MEDIA的配置,配置之后文件自动存到media下
 MEDIA_URL = "/media/"
@@ -162,3 +165,17 @@ PAGINATION_SETTINGS = {
     'MARGIN_PAGES_DISPLAYED': 2,
     'SHOW_FIRST_PAGE_WHEN_INVALID': True,
 }
+
+# 设置登录检验
+AUTHENTICATION_BACKENDS = ['apps.users.views.CustomAuth']
+
+
+
+
+
+
+
+
+
+
+

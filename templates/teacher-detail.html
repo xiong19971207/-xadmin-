@@ -72,7 +72,7 @@
                             <div class="group_list brief">
                                 {% for course in teacher.org.course_set.all %}
                                     <div class="module1_5 box">
-                                        <a href="course-detail.html">
+                                        <a href="{% url 'course:detail' course.id %}">
                                             <img width="214" height="190" class="scrollLoading"
                                                  src="{{ course.image.url }}"/>
                                         </a>

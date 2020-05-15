@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.shortcuts import render
 from django.views.generic.base import View
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -8,11 +9,11 @@ from pure_pagination import Paginator, PageNotAnInteger
 from apps.operation.models import UserFavorite, UserCourse, CourseComments
 
 
-class PlayView(LoginRequiredMixin,View):
+class PlayView(LoginRequiredMixin, View):
     # 检查是否登录，没有则返回登陆页面,Django中的基于类视图的LoginRequiredMixin
     login_url = '/login/'
 
-    def get(self, request, course_id,play_id, *args, **kwargs):
+    def get(self, request, course_id, play_id, *args, **kwargs):
         course = Course.objects.get(id=int(course_id))
         course.click_nums += 1
         course.save()
@@ -50,7 +51,7 @@ class PlayView(LoginRequiredMixin,View):
             'all_resourse': all_resourse,
             'related_course': related_course,
             'comments': comments,
-            'video_play':video_play
+            'video_play': video_play
         })
 
 
@@ -178,6 +179,13 @@ class CourseListView(View):
         elif sort == 'students':
             all_courses = all_courses.order_by('-students')
 
+        # 搜索关键字
+        keywords = request.GET.get('keywords', '')
+        s_type = 'course'
+        if keywords:
+            all_courses = all_courses.filter(
+                Q(name__icontains=keywords) | Q(desc__icontains=keywords) | Q(detail__icontains=keywords))
+
         # 设置分页器
         try:
             page = request.GET.get('page', 1)
@@ -191,4 +199,6 @@ class CourseListView(View):
             "all_courses": courses,
             'sort': sort,
             'hot_course': hot_course,
+            "keywords": keywords,
+            "s_type": s_type
         })

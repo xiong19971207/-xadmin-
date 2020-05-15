@@ -1,6 +1,8 @@
 import redis
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.backends import ModelBackend
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
@@ -11,11 +13,40 @@ from apps.users.forms import LoginForms, DynamicLoginForm, RegisterForms, Upload
 from apps.users.forms import ChangeEmailForm, UserInfoForm, UserPwdForm
 from apps.users.logics import send_email
 from apps.users.models import UserProfile
-from apps.operation.models import UserFavorite, UserCourse, UserMessage
+from apps.operation.models import UserFavorite, UserCourse, UserMessage, Banner
 from apps.organizations.models import CourseOrg, Teacher
 from apps.courses.models import Course
 
 from pure_pagination import Paginator, PageNotAnInteger
+
+
+class CustomAuth(ModelBackend):
+    # 检查用户是否登录
+    def authenticate(self, request, username=None, password=None, **kwargs):
+        # 重写authenticate方法
+        try:
+            # 无论是电话号码登录还是用户名登录都可以
+            user = UserProfile.objects.get(Q(username=username) | Q(mobile=username) | Q(email=username))
+            if user.check_password(password):
+                return user
+        except Exception:
+            return None
+
+
+class IndexView(View):
+    def get(self, request):
+        # 首页的全部数据
+        courses = Course.objects.filter(is_banner=False)[:6]
+        banner_courses = Course.objects.filter(is_banner=True)
+        course_orgs = CourseOrg.objects.all()[:15]
+        banners = Banner.objects.all().order_by('index')
+
+        return render(request, 'index.html', {
+            "courses": courses,
+            "banner_courses": banner_courses,
+            "course_orgs": course_orgs,
+            "banners": banners,
+        })
 
 
 class MessageView(LoginRequiredMixin, View):

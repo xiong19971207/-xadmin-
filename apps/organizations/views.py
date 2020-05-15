@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.http import JsonResponse
 from pure_pagination import Paginator, PageNotAnInteger
 from django.shortcuts import render
@@ -29,7 +30,7 @@ class TeacherDetailView(View):
             'teacher': teacher,
             "hot_teachers": hot_teachers,
             "has_teacher_fav": has_teacher_fav,
-            "has_org_fav": has_org_fav
+            "has_org_fav": has_org_fav,
         })
 
 
@@ -47,6 +48,12 @@ class TeacherListView(View):
         if sort == 'hot':
             teachers = teachers.order_by('-click_nums')
 
+        # 搜索关键字
+        keywords = request.GET.get('keywords', '')
+        s_type = 'teacher'
+        if keywords:
+            teachers = teachers.filter(Q(name__icontains=keywords))
+
         # 设置分页器
         try:
             page = request.GET.get('page', 1)
@@ -59,7 +66,10 @@ class TeacherListView(View):
             'all_teachers': all_teachers,
             'teachers_nums': teachers_nums,
             'hot_teachers': hot_teachers,
-            'sort': sort
+            'sort': sort,
+            "keywords":keywords,
+            "s_type": s_type
+
         })
 
 
@@ -225,6 +235,12 @@ class OrgListView(View):
         # 机构数量
         all_orgs_nums = all_orgs.count()
 
+        # 搜索关键字
+        keywords = request.GET.get('keywords', '')
+        s_type = 'org'
+        if keywords:
+            all_orgs = all_orgs.filter(Q(name__icontains=keywords) | Q(desc__icontains=keywords))
+
         # 设置分页器
         try:
             page = request.GET.get('page', 1)
@@ -242,4 +258,6 @@ class OrgListView(View):
             'city_id': city_id,
             'sort': sort,
             'hot_orgs': hot_orgs,
+            "keywords": keywords,
+            "s_type": s_type
         })
