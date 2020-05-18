@@ -1,6 +1,7 @@
+from DjangoUeditor.models import UEditorField
 from django.db import models
 
-from apps.users.models import BaseModel
+from apps.users.models import BaseModel, UserProfile
 
 
 class City(BaseModel):
@@ -22,7 +23,8 @@ class CourseOrg(BaseModel):
     '''
 
     name = models.CharField(max_length=50, verbose_name="机构名称")
-    desc = models.TextField(verbose_name='描述')
+    desc = UEditorField(verbose_name='描述', width=600, height=300, imagePath='org/ueditor/images/',
+                        filePath='org/ueditor/files/', default='')
     tag = models.CharField(default="全国知名", max_length=10, verbose_name="机构标签")
     category = models.CharField(default="pxjg", verbose_name="机构类别", max_length=4,
                                 choices=(("pxjg", "培训机构"), ("gr", "个人"), ("gx", "高校")))
@@ -69,6 +71,8 @@ class Teacher(BaseModel):
     fav_nums = models.IntegerField(default=0, verbose_name="收藏数")
     age = models.IntegerField(default=18, verbose_name="年龄")
     image = models.ImageField(upload_to="teacher/%Y/%m", verbose_name="头像", max_length=100)
+
+    user = models.OneToOneField(UserProfile, on_delete=models.CASCADE, null=True, blank=True, verbose_name='用户')
 
     def __str__(self):
         return self.name

@@ -39,6 +39,16 @@ class UserCourseAdmin(object):
     search_fields = ['user', 'course']
     list_filter = ['user', 'course', 'add_times']
 
+    def save_models(self):
+        # 重写save_models方法
+        # 是新同学就把数量加一
+        obj = self.new_obj
+        if not obj.id:
+            obj.save()
+            course = obj.course
+            course.students += 1
+            course.save()
+
 
 xadmin.site.register(UserAsk, UserAskAdmin)
 xadmin.site.register(CourseComments, CourseCommentsAdmin)

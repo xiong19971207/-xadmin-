@@ -31,7 +31,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xadmin/plugins" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -48,11 +48,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dell\Desktop\Xadministration\xadmin\plugins" />
+      <recent name="C:\Users\dell\Desktop\Xadministration" />
       <recent name="C:\Users\dell\Desktop\Xadministration\templates" />
       <recent name="C:\Users\dell\Desktop\Xadministration\media" />
       <recent name="C:\Users\dell\Desktop\Xadministration\static\js" />
-      <recent name="C:\Users\dell\Desktop\Xadministration\static" />
-      <recent name="C:\Users\dell\Desktop\Xadministration" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dell\Desktop\Xadministration\templates" />
@@ -151,7 +151,11 @@
       <workItem from="1589414798097" duration="2752000" />
       <workItem from="1589417925629" duration="2126000" />
       <workItem from="1589437530485" duration="11463000" />
-      <workItem from="1589525977561" duration="5344000" />
+      <workItem from="1589525977561" duration="5493000" />
+      <workItem from="1589678928946" duration="3561000" />
+      <workItem from="1589691558087" duration="120000" />
+      <workItem from="1589701532465" duration="8728000" />
+      <workItem from="1589759977649" duration="10497000" />
     </task>
     <servers />
   </component>
@@ -179,46 +183,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="512" height="582" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1589273118148" />
-    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1589375405367">
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1589691604650">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589375405367" />
-    <state width="1483" height="331" key="GridCell.Tab.0.bottom" timestamp="1589533505903">
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589691604650" />
+    <state width="1483" height="389" key="GridCell.Tab.0.bottom" timestamp="1589789427013">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="331" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589533505903" />
-    <state width="1483" height="331" key="GridCell.Tab.0.center" timestamp="1589533505903">
+    <state width="1483" height="389" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589789427013" />
+    <state width="1483" height="389" key="GridCell.Tab.0.center" timestamp="1589789427012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="331" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589533505903" />
-    <state width="1483" height="331" key="GridCell.Tab.0.left" timestamp="1589533505903">
+    <state width="1483" height="389" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589789427012" />
+    <state width="1483" height="389" key="GridCell.Tab.0.left" timestamp="1589789427012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="331" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589533505903" />
-    <state width="1483" height="331" key="GridCell.Tab.0.right" timestamp="1589533505903">
+    <state width="1483" height="389" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589789427012" />
+    <state width="1483" height="389" key="GridCell.Tab.0.right" timestamp="1589789427013">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="331" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589533505903" />
-    <state width="1483" height="326" key="GridCell.Tab.1.bottom" timestamp="1589528463519">
+    <state width="1483" height="389" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589789427013" />
+    <state width="1483" height="298" key="GridCell.Tab.1.bottom" timestamp="1589720616951">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="326" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589528463519" />
-    <state width="1483" height="326" key="GridCell.Tab.1.center" timestamp="1589528463519">
+    <state width="1483" height="298" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589720616951" />
+    <state width="1483" height="298" key="GridCell.Tab.1.center" timestamp="1589720616951">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="326" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1589528463519" />
-    <state width="1483" height="326" key="GridCell.Tab.1.left" timestamp="1589528463519">
+    <state width="1483" height="298" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1589720616951" />
+    <state width="1483" height="298" key="GridCell.Tab.1.left" timestamp="1589720616950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="326" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1589528463519" />
-    <state width="1483" height="326" key="GridCell.Tab.1.right" timestamp="1589528463519">
+    <state width="1483" height="298" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1589720616950" />
+    <state width="1483" height="298" key="GridCell.Tab.1.right" timestamp="1589720616951">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="326" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589528463519" />
-    <state x="223" y="0" key="SettingsEditor" timestamp="1589415153012">
+    <state width="1483" height="298" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589720616951" />
+    <state x="139" y="0" key="SettingsEditor" timestamp="1589691661061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589415153012" />
+    <state x="139" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589691661061" />
     <state x="509" y="0" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1587730718061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -231,10 +235,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="350" y="64" width="715" height="734" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1589424987613" />
-    <state x="431" y="145" width="840" height="678" key="search.everywhere.popup" timestamp="1589424978040">
+    <state x="431" y="145" width="840" height="678" key="search.everywhere.popup" timestamp="1589682315087">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="840" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589424978040" />
+    <state x="431" y="145" width="840" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589682315087" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -249,6 +253,7 @@
     <watches-manager>
       <configuration name="Python.DjangoServer">
         <watch expression="request" language="Python" />
+        <watch expression="request" />
         <watch expression="request" />
       </configuration>
     </watches-manager>

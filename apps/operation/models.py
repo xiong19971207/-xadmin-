@@ -20,6 +20,7 @@ class Banner(BaseModel):
     def __str__(self):
         return self.title
 
+
 class UserAsk(BaseModel):
     name = models.CharField(max_length=20, verbose_name='姓名')
     mobile = models.CharField(max_length=11, verbose_name='手机号')
@@ -67,3 +68,6 @@ class UserCourse(BaseModel):
     class Meta:
         verbose_name = '用户课程'
         verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.course.name

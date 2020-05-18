@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1fk2sv&d%d*w9%o(y_3-$hh_&ytglp!9z-k_-jm2+i4xk#_0+$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -53,7 +53,13 @@ INSTALLED_APPS = [
     'captcha',
 
     # 分页器设置
-    'pure_pagination'
+    'pure_pagination',
+
+    # 富文本编辑器
+    'DjangoUeditor',
+
+    # 导入导出设置
+    'import_export'
 ]
 
 MIDDLEWARE = [
@@ -146,8 +152,8 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 # 下面两个只能存在一个
-# STATICFILES_DIRS = [BASE_DIR, os.path.join('static')]
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS = [BASE_DIR, os.path.join('static')]
+# STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 # MEDIA的配置,配置之后文件自动存到media下
 MEDIA_URL = "/media/"

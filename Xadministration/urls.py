@@ -23,7 +23,7 @@ from django.views.static import serve
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView
 
-from Xadministration.settings import MEDIA_ROOT, STATIC_ROOT
+from Xadministration.settings import MEDIA_ROOT
 from apps.users.views import LoginView, LogoutView, RegisterView, SendEmailView, IndexView
 
 import xadmin
@@ -56,9 +56,11 @@ urlpatterns = [
 
     # 配置全局图片显示的URL
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
-    url(r'^static/(?P<path>.*)$', serve, {'document_root': STATIC_ROOT}),
+    # url(r'^static/(?P<path>.*)$', serve, {'document_root': STATIC_ROOT}),
     # 加入图形验证码
     url(r'^captcha/', include('captcha.urls')),
 
+    # ueditor的配置url
+    url(r'^ueditor/', include('DjangoUeditor.urls')),
 
 ]
